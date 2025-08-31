@@ -15,7 +15,7 @@ const AboutUs = () => {
           header="ჩვენს შესახებ"
           paragraph="ჩვენი გუნდი შედგება გამოცდილი პროფესიონალებისგან, რომლებიც მზად არიან
           დაგეხმარონ ფინანსური გამოწვევების გადალახვაში."
-            padding='py-10'
+          padding='py-10'
         />
         <div className='about-us-content flex flex-row items-center gap-8'>
             <div className='about-us-text w-[50%]'>

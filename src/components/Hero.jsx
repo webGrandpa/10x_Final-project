@@ -24,7 +24,7 @@ const Hero = () => {
             საკონსულტაციო მომსახურებას, რომელიც დაგეხმარებათ
             ბიზნესის განვითარებაში.
         </p>
-        <div className="flex space-x-4 gap-3">
+        <div className="flex space-x-4">
             <Button title="კონსულტაციის მოთხოვნა"
             bgColor="bg-[#1b375d]"
             textColor="text-white"
@@ -38,7 +38,7 @@ const Hero = () => {
             hoverBg="bg-[#1b375d]"
             />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <HeroCards 
             cardImage={card1}
             numTitle="15+"

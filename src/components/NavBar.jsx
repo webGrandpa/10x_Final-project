@@ -6,7 +6,8 @@ import Button from './Button'
 
 const NavBar = () => {
   return (
-    <div className="navbar w-full h-[60px] flex items-center justify-between px-20">
+    <div className="navbar w-full h-[60px] flex items-center justify-between px-20 
+    md:px-1 md:items-center md:justify-between">
        <a href="/"><img src={logo} alt="FinCo Logo" /></a>
         <ul className="flex space-x-4">
           <LiTag title="ჩვენ შესახებ" />
