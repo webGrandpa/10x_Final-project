@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import faq1 from '../assets/faq1.svg';
-// import faq2 from '../assets/faq2.svg';
 
 const FAQitem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +13,13 @@ const FAQitem = ({ title, content }) => {
     mb-2 border-b-2 border-gray-200">
       <button 
         className="flex items-center justify-start 
-        gap-10 w-full p-4 text-xl font-semibold 
+        gap-6 w-full p-4 text-xl font-semibold 
         text-left text-[#1B365D] bg-[#E8EDF2] 
         hover:bg-gray-50 active:bg-gray-50 
         focus:outline-none"
         onClick={toggleFAQ}
       > 
-      <span>
+      <span className="flex-shrink-0">
           <img 
             src={faq1} 
             alt={isOpen ? 'Collapse icon' : 'Expand icon'} 

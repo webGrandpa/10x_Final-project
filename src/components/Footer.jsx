@@ -29,17 +29,20 @@ const Footer = () => {
         { id: 4, title: 'ორშაბათი - პარასკევი: 09:00 - 18:00', href: '/hours/4' }
     ];
   return (
-    <div className='bg-[#1B365D] pt-8 pb-12 px-30 gap-8 text-white flex flex-row justify-between'>
-      <div className='social-media'>
+    <div className='bg-[#1B365D] pt-8 pb-12 px-6 md:px-10 lg:px-20 text-white flex flex-col md:flex-row justify-between gap-10 md:gap-20'>
+      <div className='social-media w-full md:w-1/4'>
         <img src={footerLogo} alt="footer logo" />
-        <p className='text-sm py-2'>
+        <p className='text-sm py-2 mt-4'>
           პროფესიონალური ფინანსური მომსახურება <br /> თქვენი ბიზნესის წარმატებისთვის.
         </p>
           <SocialMediaIcons />
       </div>
-      <List HeaderTitle="სწრაფი ბმულები" ListItems={InstantLinks} />
-      <List HeaderTitle="სერვისები" ListItems={ServiceLinks} />
-      <List HeaderTitle="საკონტაქტო ინფორმაცია" ListItems={ContactLinks} />
+      
+      <div className="w-full md:w-3/4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8">
+        {/* <List HeaderTitle="სწრაფი ბმულები" ListItems={InstantLinks} /> */}
+        <List HeaderTitle="სერვისები" ListItems={ServiceLinks} />
+        <List HeaderTitle="საკონტაქტო ინფორმაცია" ListItems={ContactLinks} />
+      </div>
     </div>
   );
 };

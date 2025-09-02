@@ -10,20 +10,21 @@ import Figure from './Figure'
 
 const WhyUs = () => {
   return (
-    <div className='text-center pb-10 bg-[#1B365D0D] flex flex-col items-center gap-6 px-30'>
+    <div className='text-center pb-10 bg-[#1B365D0D] flex flex-col items-center gap-6 px-6 md:px-10 lg:px-20'>
         <SectionHeaders
           header="რატომ უნდა აგვირჩიოთ"
           paragraph="ჩვენ გთავაზობთ უმაღლესი ხარისხის მომსახურებას, რომელიც მორგებულია თქვენი
           ბიზნესის უნიკალურ საჭიროებებზე."
-          padding="pt-20 pb-4"
+          padding="pt-10"
         />
-        <div className="service-cards flex items-center justify-between h-[80%] ">
+        <div className="service-cards flex flex-col md:flex-row items-center justify-between gap-8 h-full">
             <ServiceCard
                 image={wu1}
                 header="პროფესიონალიზმი"
                 paragraph="ჩვენი გუნდი შედგება
                 სპეციალისტებისგან, რომლებსაც აქვთ
                 მრავალწლიანი გამოცდილება ფინანსურ სფეროში."
+                direction={'flex-row'}
             />
             <ServiceCard
                 image={wu2}
@@ -40,8 +41,8 @@ const WhyUs = () => {
                 საკანონმდებლო მოთხოვნას."
             />
         </div>
-        <div className=' flex justify-between bg-white px-8 py-10 rounded-lg shadow-md w-full'>
-            <div className='flex flex-col gap-5 justify-start'>
+        <div className='flex flex-col md:flex-row justify-between bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-md w-full gap-8'>
+            <div className='flex flex-col gap-5 justify-start text-start w-full md:w-1/2'>
                 <SectionHeaders
                   header="გრძელვადიანი პარტნიორობა"
                   paragraph="ჩვენ ვზრუნავთ თქვენი ბიზნესის წარმატებაზე და ვცდილობთ შევქმნათ
@@ -52,12 +53,12 @@ const WhyUs = () => {
                 textCenter='start'
                 padding='pb-0'
                 />
-                <div className='flex items-center justify-start gap-5'>
+                <div className='flex flex-col sm:flex-row items-start px-4 justify-start gap-5 pt-4'>
                     <Figure image={part1} caption="24/7 მხარდაჭერა" />
                     <Figure image={part2} caption="უსაფრთხოება" />
                 </div>
             </div>
-            <div className='grid grid-cols-2 gap-2'>
+            <div className='grid grid-cols-2 gap-2 w-full md:w-1/2 mt-4 md:mt-0'>
                 <SectionHeaders
                   header="13"
                   paragraph="წლიანი გამოცდილება"
@@ -75,7 +76,7 @@ const WhyUs = () => {
                   rounded='xl'
                 />
                 <SectionHeaders
-                  header="170"
+                  header="170+"
                   paragraph="წარმატებული სტუდენტი"
                   hasDivider={false}
                   bgcolor="bg-[#E6F3FF4D]"
@@ -84,7 +85,7 @@ const WhyUs = () => {
                 />
                 <SectionHeaders
                   header="15+"
-                  paragraph="პროფესიონალი"
+                  paragraph="პროფესიონალი თანამშრომელი"
                   hasDivider={false}
                   bgcolor="bg-[#E6F3FF4D]"
                   padding="py-2"

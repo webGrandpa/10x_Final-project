@@ -9,19 +9,26 @@ import mail1 from '../assets/mail1.svg'
 
 const ContactUs = () => {
   return (
-    <div className='px-30 w-full py-16'>
+    <div className='px-6 md:px-10 lg:px-20 w-full py-10 sm:py-16'>
         <div className='bg-gray-100 rounded-3xl shadow-md'>
             <SectionHeaders
               header="დაგვიკავშირდით"
-              padding='pt-10 '
+              padding='pt-10'
             />
-            <div className='flex flex-col md:flex-row justify-between px-10 pb-10 gap-10'>
-                <div className='flex flex-col gap-5'>
-                    <p className='text-[#1B365D] font-extrabold'>გაქვთ შეკითხვა სერვისზე? <br /> გინდათ კურსებზე რეგისტრაცია ან კონსულტაცია? <br /> Finco-ს გუნდი მზადაა უპასუხოს თქვენს ყოველ შეკითხვას</p>
-                    <p className='text-[#1B365D] font-extrabold'>მისამართი: ქ. ბათუმი მელიქიშვილის 88</p>
-                    <p className='text-[#1B365D] font-extrabold'>ტელ: +995 123 456 789</p>
-                    <p className='text-[#1B365D] font-extrabold'>ელ.ფოსტა: info@finco.ge</p>
-                    <div className='flex gap-4 pt-20'>
+            <div className='flex flex-col md:flex-row justify-between p-6 sm:p-10 pb-10 gap-10'>
+                <div className="w-full md:w-1/2 order-1 md:order-last">
+                  <img
+                  className='rounded-lg shadow-md w-full h-auto'
+                  src={contact1} alt="Contact Us" />
+                </div>
+                <div className='flex flex-col gap-5 w-full md:w-1/2 order-1 md:order-first'>
+                    <p className='text-[#1B365D] font-extrabold text-base md:text-lg'>
+                      გაქვთ შეკითხვა სერვისზე? <br /> გინდათ კურსებზე რეგისტრაცია ან კონსულტაცია? <br /> Finco-ს გუნდი მზადაა უპასუხოს თქვენს ყოველ შეკითხვას
+                    </p>
+                    <p className='text-[#1B365D] font-extrabოლდ text-sm md:text-base'>მისამართი: ქ. ბათუმი მელიქიშვილის 88</p>
+                    <p className='text-[#1B365D] font-extrabold text-sm md:text-base'>ტელ: +995 123 456 789</p>
+                    <p className='text-[#1B365D] font-extrabold text-sm md:text-base'>ელ.ფოსტა: info@finco.ge</p>
+                    <div className='flex flex-col sm:flex-row gap-4 pt-4 sm:pt-20 w-full'>
                         <Button title="+995 577 29 90 90"
                             bgColor="bg-[#1b375d]"
                             textColor="text-white"
@@ -40,9 +47,6 @@ const ContactUs = () => {
                         />
                     </div>
                 </div>
-                <img
-                className='rounded-lg shadow-md'
-                 src={contact1} alt="" />
             </div>
         </div>
     </div>

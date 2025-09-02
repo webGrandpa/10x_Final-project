@@ -2,9 +2,10 @@ import React from 'react';
 import ButtonArrow from '../assets/ButtonArrow.svg'
 
 
-const ButtonWithArrow = ({ buttonText, showArrow = true }) => {
+const ButtonWithArrow = ({ buttonText, self = 'self-start',
+  showArrow = true }) => {
   return (
-    <div className="w-52 h-14 flex justify-center items-center">
+    <div className={`w-52 h-14 flex justify-center items-center ${self}`}>
       <button className="group relative mt-7 flex items-center justify-between
       gap-3 rounded-3xl bg-[#EBF0F5] px-4 py-1.5 text-[#1B365D] shadow-md
       transition-all duration-100 hover:scale-101 cursor-pointer
