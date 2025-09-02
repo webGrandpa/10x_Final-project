@@ -7,7 +7,7 @@ const ButtonWithArrow = ({ buttonText, showArrow = true }) => {
     <div className="w-52 h-14 flex justify-center items-center">
       <button className="group relative mt-7 flex items-center justify-between
       gap-3 rounded-3xl bg-[#EBF0F5] px-4 py-1.5 text-[#1B365D] shadow-md
-      transition-all duration-100 hover:scale-101
+      transition-all duration-100 hover:scale-101 cursor-pointer
       active:scale-99 hover:border-[0.5px] hover:shadow-none mb-4">
         <span>{buttonText}</span>
         {showArrow && (

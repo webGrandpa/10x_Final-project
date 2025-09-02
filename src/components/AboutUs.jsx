@@ -9,7 +9,7 @@ import SectionHeaders from './SectionHeaders';
 const AboutUs = () => {
   return (
     <div id="about-us"
-    className='about-us-section flex items-center justify-center flex-col gap-8 pb-10 px-20  bg-[#e6f3ff9f]'
+    className='about-us-section flex items-center justify-center flex-col gap-8 pb-10 px-30  bg-[#e6f3ff9f]'
     >
         <SectionHeaders
           header="ჩვენს შესახებ"
@@ -17,7 +17,7 @@ const AboutUs = () => {
           დაგეხმარონ ფინანსური გამოწვევების გადალახვაში."
           padding='py-10'
         />
-        <div className='about-us-content flex flex-row items-center gap-8'>
+        <div className='about-us-content flex flex-row items-center justify-between'>
             <div className='about-us-text w-[50%]'>
                 <h3 className='text-xl font-semibold mb-5'>ვინ ვართ ჩვენ</h3>
                 <p className='text-[#374151bf] mb-5'>

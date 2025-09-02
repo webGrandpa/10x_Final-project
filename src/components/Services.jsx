@@ -9,14 +9,15 @@ import SectionHeaders from './SectionHeaders'
 
 const Services = () => {
   return (
-    <div className="services-section text-center pb-10 bg-[#ffffffd4] flex flex-col items-center gap-6">
+    <div className="services-section text-center pb-10 bg-[#ffffffd4] 
+    flex flex-col items-center gap-6">
         <SectionHeaders
           header="ჩვენი სერვისები"
           paragraph="გთავაზობთ კომპლექსურ ფინანსურ მომსახურებას, რომელიც მორგებულია თქვენი
           ბიზნესის საჭიროებებზე."
           padding='py-10'
         />
-        <div className="service-cards flex items-center justify-between px-20 ">
+        <div className="service-cards flex items-center justify-between px-30">
             <ServiceCard
                 image={Ser1}
                 header="ბუღალტრული მომსახურება"
@@ -24,7 +25,7 @@ const Services = () => {
                   დეკლარაციების მომზადება, ფინანსური
                   ანგარიშგება და ანალიზი."
                 features={[
-                  "ყოველდღიური ოპერაციების აღრიცხვა",
+                  "ყოველდღიური აღრიცხვა",
                   "საგადასახადო დეკლარაციები",
                   "ფინანსური ანგარიშგება"
                 ]}>

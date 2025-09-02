@@ -29,7 +29,7 @@ const Footer = () => {
         { id: 4, title: 'ორშაბათი - პარასკევი: 09:00 - 18:00', href: '/hours/4' }
     ];
   return (
-    <div className='bg-[#1B365D] pt-8 pb-12 px-20 gap-8 text-white flex flex-row justify-between'>
+    <div className='bg-[#1B365D] pt-8 pb-12 px-30 gap-8 text-white flex flex-row justify-between'>
       <div className='social-media'>
         <img src={footerLogo} alt="footer logo" />
         <p className='text-sm py-2'>

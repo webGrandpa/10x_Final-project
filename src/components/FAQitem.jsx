@@ -33,7 +33,7 @@ const FAQitem = ({ title, content }) => {
         className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="p-4 text-gray-700 [#E8EDF2]">
-          <p>{content}</p>
+          <p className='pl-12'>{content}</p>
         </div>
       </div>
     </div>

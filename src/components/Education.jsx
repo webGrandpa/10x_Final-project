@@ -9,7 +9,7 @@ import Button from './Button'
 
 const Education = () => {
   return (
-    <div className='text-center p-10 bg-[#ffffffd4] flex flex-col items-center gap-6 px-20'>
+    <div className='text-center p-10 bg-[#ffffffd4] flex flex-col justify-between gap-6 px-30'>
       <SectionHeaders
         header="ბუღალტრული განათლება"
         paragraph="გთავაზობთ პროფესიულ ტრენინგებს და კურსებს ბუღალტერიაში, რომლებიც
@@ -18,7 +18,7 @@ const Education = () => {
       />
       <div className='flex flex-row items-center justify-between gap-20'>
           <img
-          className='w-2xl h-auto rounded-2xl'
+          className='max-w-3xl h-auto rounded-2xl'
           src={students} alt="Students" />
           <div className='flex flex-col items-start'>
               <SectionHeaders

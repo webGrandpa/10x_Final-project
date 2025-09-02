@@ -9,7 +9,7 @@ import mail1 from '../assets/mail1.svg'
 
 const ContactUs = () => {
   return (
-    <div className='px-20 w-full py-16'>
+    <div className='px-30 w-full py-16'>
         <div className='bg-gray-100 rounded-3xl shadow-md'>
             <SectionHeaders
               header="დაგვიკავშირდით"

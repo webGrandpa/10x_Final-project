@@ -17,10 +17,11 @@ const News = () => {
           margin="mb-0"
           padding='pt-10'
         />
-        <div className='flex flex-row md:flex-row justify-center items-center gap-8 mb-8 px-20'>
+        <div className='flex flex-row md:flex-row justify-center items-center gap-8 mb-8 px-30'>
             <ServiceCard
                     image={news1}
                     header="2025 წლის საგადასახადო ცვლილებები ბიზნესისთვის"
+                    direction={'flex-col'}
                     paragraph="გაეცანით 2025 წლის საგადასახადო კოდექსში შეტანილ ცვლილებებს და მათ გავლენას თქვენს..."
                 ><ButtonWithArrow
                     buttonText="დაწვრილებით"
@@ -28,7 +29,8 @@ const News = () => {
             </ServiceCard>
             <ServiceCard
                     image={news2}
-                    header="ციფრული ბუღალტერიის უპირატესობები მცირე ბიზნესისთვის"
+                    header="ციფრული ბუღალტერიის უპირატესობების"
+                    direction={'flex-col'}
                     paragraph="როგორ შეუძლია ციფრულ ბუღალტერიას გააუმჯობესოს თქვენი ბიზნესის ეფექტურობა და ..."
                 ><ButtonWithArrow
                     buttonText="დაწვრილებით"
@@ -37,6 +39,7 @@ const News = () => {
             <ServiceCard
                     image={news3}
                     header="როგორ შევადგინოთ ეფექტური ბიზნეს გეგმა"
+                    direction={'flex-col'}
                     paragraph="ბიზნეს გეგმის შედგენის პრაქტიკული გზამკვლევი დამწყები მეწარმეებისთვის. გაეცანით ბიზნეს..."
                 ><ButtonWithArrow
                     buttonText="დაწვრილებით"

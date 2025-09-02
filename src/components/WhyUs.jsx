@@ -10,7 +10,7 @@ import Figure from './Figure'
 
 const WhyUs = () => {
   return (
-    <div className='text-center pb-10 bg-[#1B365D0D] flex flex-col items-center gap-6 px-20'>
+    <div className='text-center pb-10 bg-[#1B365D0D] flex flex-col items-center gap-6 px-30'>
         <SectionHeaders
           header="რატომ უნდა აგვირჩიოთ"
           paragraph="ჩვენ გთავაზობთ უმაღლესი ხარისხის მომსახურებას, რომელიც მორგებულია თქვენი

@@ -31,7 +31,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="bg-[#E8EDF2] py-6 px-4 md:px-20">
+    <div className="bg-[#E8EDF2] py-6 px-4 md:px-30">
       <SectionHeaders
         header="ხშირად დასმული კითხვები"
         padding='pt-10'

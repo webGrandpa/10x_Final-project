@@ -15,7 +15,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <div className="relative flex flex-col gap-5 items-start justify-center text-start h-full px-20">
+      <div className="relative flex flex-col gap-5 items-start justify-center text-start h-full px-30">
         <h1 className="text-4xl md:text-6xl font-extrabold w-3xl text-[#1b375d]">
           ბუღალტრული მომსახურება თქვენი ბიზნესისთვის
         </h1>

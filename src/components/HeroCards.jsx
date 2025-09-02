@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroCards = ({cardImage,numTitle, textTitle, fontSize}) => {
   return (
-    <div className="flex gap-2.5 items-center justify-center space-y-2 p-4">
+    <div className="flex gap-2.5 items-center justify-center space-y-2 pr-4">
         <img src={cardImage} alt=""
         className='w-12 h-12 object-contain align-middle'
         />
