@@ -1,13 +1,16 @@
 import React from 'react';
-import ButtonArrow from '../assets/ButtonArrow.svg'
+import { Link } from 'react-router-dom';
+import ButtonArrow from '../assets/ButtonArrow.svg';
 
 
-const ButtonWithArrow = ({ buttonText, self = 'self-start',
+const ButtonWithArrow = ({ buttonText, to, self = 'self-start',
   showArrow = true }) => {
   return (
-    <div className={`w-52 h-14 flex justify-center items-center ${self}`}>
-      <button className="group relative mt-7 flex items-center justify-between
-      gap-3 rounded-3xl bg-[#EBF0F5] px-4 py-1.5 text-[#1B365D] shadow-md
+    <div className={`md:w-52 w-full h-14 flex justify-center items-center ${self}`}>
+      <Link 
+        to={to} 
+        className="group relative mt-7 flex items-center justify-between w-[80%] md:w-52
+      gap-3 rounded-3xl bg-[#EBF0F5] px-8 py-1.5 text-[#1B365D] shadow-md
       transition-all duration-100 hover:scale-101 cursor-pointer
       active:scale-99 hover:border-[0.5px] hover:shadow-none mb-4">
         <span>{buttonText}</span>
@@ -22,7 +25,7 @@ const ButtonWithArrow = ({ buttonText, self = 'self-start',
             src={ButtonArrow} alt="Arrow" />
           </div>
         )}
-      </button>
+      </Link>
     </div>
   );
 };

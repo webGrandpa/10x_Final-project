@@ -5,6 +5,8 @@ import Figure from './Figure'
 import fig1 from '../assets/fig1.svg'
 import fig2 from '../assets/fig2.svg'
 import Button from './Button'
+import { Link } from 'react-router-dom'
+
 
 
 const Education = () => {
@@ -43,7 +45,7 @@ const Education = () => {
                 paragraph="იდეალური კურსი დამწყებთათვის, რომლებსაც სურთ ბუღალტერიის საფუძვლების შესწავლა."
               >
                 <div className='flex flex-row justify-start gap-2 items-center 
-                w-full px-4 md:px-0 pb-2'>
+                w-full md:px-0 pb-2'>
                   <Figure
                     image={fig1}
                     caption="3 თვე"
@@ -67,7 +69,7 @@ const Education = () => {
                 paragraph="კურსი მათთვის, ვინც უკვე ფლობს საბაზისო ცოდნას და სურს პრაქტიკული გამოცდილების მიღება."
               >
                 <div className='flex flex-row justify-start gap-2 items-center 
-                w-full px-4 md:px-0 pb-2'>
+                w-full md:px-0 pb-2'>
                   <Figure
                     image={fig1}
                     caption="5 თვე"
@@ -91,7 +93,7 @@ const Education = () => {
                 paragraph="შეისწავლეთ საგადასახადო კანონმდებლობა და მისი პრაქტიკული გამოყენება ბიზნესში."
               >
                 <div className='flex flex-row justify-start gap-2 items-center 
-                w-full px-4 md:px-0 pb-2'>
+                w-full md:px-0 pb-2'>
                   <Figure
                     image={fig1}
                     caption="1.5 თვე"
@@ -104,13 +106,15 @@ const Education = () => {
                   />
                 </div>
               </SectionHeaders>
-              <div className="w-full text-start mt-8">
-                <Button title="კურსზე რეგისტრაცია"
-                  bgColor="bg-[#1b375d]"
-                  textColor="text-white"
-                  hoverText="text-[#1b375d]"
-                  hoverBg="bg-white"
-                />
+              <div className="w-full self-start text-start mt-8">
+                <Link to="/education">
+                  <Button title="კურსზე რეგისტრაცია"
+                    bgColor="bg-[#1b375d]"
+                    textColor="text-white"
+                    hoverText="text-[#1b375d]"
+                    hoverBg="bg-white"
+                  />
+                </Link>
               </div>
           </div>
       </div>

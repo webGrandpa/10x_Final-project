@@ -9,6 +9,7 @@ const Button = ({
   margin = "0",
   leftIcon,
   leftHoverIcon,
+  textStart = "start",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -25,9 +26,9 @@ const Button = ({
   const currentLeftIcon = isHovered && leftHoverIcon ? leftHoverIcon : leftIcon;
 
   return (
-    <div>
+    <div className={`max:md:w-full text-center md:text-${textStart}`}>
       <button
-        className={`
+        className={`max-md:w-full
           relative px-4 py-3 rounded-[8px] 
           overflow-hidden border border-[#1b375d] shadow-2xl
           transition-all hover:shadow-[#1b375d]

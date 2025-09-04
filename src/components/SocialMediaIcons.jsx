@@ -46,7 +46,7 @@ const SocialMediaIcons = () => {
                 }}
               ></div>
               <span
-                className='relative z-30 transition-all duration-300'
+                className='relative z-30 transition-all duration-500'
                 style={{
                   color: isHovered ? '#fff' : '#262626',
                   transform: isHovered ? 'rotateY(360deg)' : 'none',

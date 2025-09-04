@@ -1,29 +1,11 @@
-import React from 'react'
-import Hero from './Hero'
-import AboutUs from './AboutUs'
-import Services from './Services'
-import WhyUs from './WhyUs'
-import Education from './Education'
-import News from './News'
-import FAQ from './FAQ'
-import ContactUs from './ContactUs'
-import Footer from './Footer'
+import React from 'react';
 
-const MainContent = () => {
+const MainContent = ({ children }) => {
   return (
-    <div>
-      <Hero />
-      <AboutUs />
-      <Services />
-      <WhyUs />
-      <Education />
-      <News />
-      <FAQ />
-      <ContactUs />
-      <Footer />
+    <div className="flex-grow">
+      {children}
     </div>
+  );
+};
 
-  )
-}
-
-export default MainContent
+export default MainContent;
