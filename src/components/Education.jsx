@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 
 const Education = () => {
   return (
-    <div className='text-center p-10 bg-[#ffffffd4] flex flex-col justify-between gap-6 px-6 md:px-10 lg:px-20 min-[1920px]:px-[150px] py-10'>
+    <div className='text-center bg-[#ffffffd4] flex flex-col justify-between gap-6 px-6 md:px-10 lg:px-20 min-[1920px]:px-[150px] pb-10'>
       <SectionHeaders
         header="ბუღალტრული განათლება"
         paragraph="გთავაზობთ პროფესიულ ტრენინგებს და კურსებს ბუღალტერიაში, რომლებიც

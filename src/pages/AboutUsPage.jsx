@@ -1,5 +1,6 @@
-import React, { useState } from 'react'; // Шаг 1: Убедитесь, что useState импортирован
+import React, { useState } from 'react';
 import SectionHeaders from '../components/SectionHeaders';
+import ServiceCard from '../components/ServicesCard';
 import HeroCard from '../components/HeroCards';
 import AbUsPage1 from '../assets/AbUsPage1.svg';
 import AbUsPage2 from '../assets/AbUsPage2.svg';
@@ -14,15 +15,13 @@ import avatar2 from '../assets/avatar2.svg';
 import avatar3 from '../assets/avatar3.svg';
 import avatar4 from '../assets/avatar4.svg';
 import Button from '../components/Button';
-import ConsultationModal from '../components/ModalComponents/ConsultationModal'; // Шаг 2: Проверьте путь импорта
+import ConsultationModal from '../components/ModalComponents/ConsultationModal';
 
 const AboutUsPage = () => {
-  // Шаг 3: Объявление состояния для модального окна
   const [showConsultationModal, setShowConsultationModal] = useState(false);
 
   return (
     <>
-    {/* ...весь ваш JSX-код без изменений... */}
     <div id="about-us-page" 
       className='about-us-section flex items-center justify-center flex-col gap-8 py-10   px-6 md:px-10 lg:px-20 bg-[#e6f3ff9f] mt-20'>
       <SectionHeaders
@@ -40,11 +39,11 @@ const AboutUsPage = () => {
             header="ჩვენი მისია"
             paragraph="ჩვენი მისიაა ვიყოთ სანდო პარტნიორი კომპანიებისა და პროფესიონალებისთვის — დავეხმაროთ მათ ფინანსურ დაგეგმვაში, სტრატეგიულ გადაწყვეტილებებსა და თანამედროვე ბიზნესგადაწყვეტილებებში. ჩვენ გვჯერა, რომ წარმატება მიიღწევა პროფესიონალიზმისა და ერთგულების გაერთიანებით, სადაც თითოეული ნაბიჯი სიმტკიცესა და გაზომვად შედეგზეა დაფუძნებული."
             hasDivider={false}
-            textCenter='start'
+            textCenter='center md:start'
             padding='pb-0'
           />
         </div>
-        <div className='grid grid-cols-2 gap-4 w-full md:w-1/2 mt-4 md:mt-0 '>
+        <div className='grid md:grid-cols-2 grid-cols-1 gap-4 w-full md:w-1/2 mt-4 md:mt-0 '>
           <HeroCard
             cardImage={AbUsPage1}
             numTitle="13"
@@ -88,7 +87,7 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className='flex flex-col justify-between items-center p-6 md:p-8 lg:p-10      w-full gap-8'>
-        <div className='flex flex-col gap-5 justify-start text-start w-full whitespace-nowrap'>
+        <div className='flex flex-col gap-5 justify-start text-start w-full'>
           <SectionHeaders
             header="ჩვენი ღირებულებები"
             paragraph="   პრინციპები, რომლებიც გვაკავშირებს ყველა პროექტთან და პარტნიორთან:"
@@ -100,49 +99,33 @@ const AboutUsPage = () => {
         <div className='grid grid-cols-1 
           md:grid-cols-2 
           lg:grid-cols-4 gap-10 w-full'>
-          <HeroCard
-            cardImage={gir1}
-            numTitle="ინოვაცია"
-            textTitle="ვიყენებთ თანამედროვე ინსტრუმენტებსა და მიდგომებს."
-            direction='flex-col'
-            wrapperCenter='justify-center 
-            rounded-lg bg-white py-6 px-12 text-center'
-            alignCenter = 'items-center'
-            fontSize='lg'
-            noWrap={false}
+          <ServiceCard
+            image={gir1}
+            header="ინოვაცია"
+            paragraph="ვიყენებთ თანამედროვე ინსტრუმენტებსა და მიდგომებს."
+            direction='md:flex-col'
+            textStart='justify-start md:justify-center'
           />
-          <HeroCard
-            cardImage={gir2}
-            numTitle="პასუხისმგებლობა"
-            textTitle="თითოეული გადაწყვეტილება ეფუძნება ზუსტ ანალიზს."
-            direction='flex-col'
-            wrapperCenter='justify-center 
-            rounded-lg bg-white py-6 px-12 text-center'
-            alignCenter = 'items-center'
-            fontSize='lg'
-            noWrap={false}
+          <ServiceCard
+            image={gir2}
+            header="პასუხისმგებლობა"
+            paragraph="თითოეული გადაწყვეტილება ეფუძნება ზუსტ ანალიზს."
+            direction='md:flex-col'
+            textStart='justify-start md:justify-center'
           />
-          <HeroCard
-            cardImage={gir3}
-            numTitle="სანდოობა"
-            textTitle="ჩვენი სიტყვა ისეთივე მტკიცეა, როგორც ჩვენი ანალიზი."
-            direction='flex-col'
-            wrapperCenter='justify-center 
-            rounded-lg bg-white py-6 px-12 text-center'
-            alignCenter = 'items-center'
-            fontSize='lg'
-            noWrap={false}
+          <ServiceCard
+            image={gir3}
+            header="სანდოობა"
+            direction='md:flex-col'
+            textStart='justify-start md:justify-center'
+            paragraph="ჩვენი სიტყვა ისეთივე მტკიცეა, როგორც ჩვენი ანალიზი."
           />
-          <HeroCard
-            cardImage={gir4}
-            numTitle="თანამშრომლობა"
-            textTitle="ვმუშაობთ როგორც ერთიანი გუნდი კლიენტთან და პარტნიორებთან ერთად."
-            direction='flex-col'
-            wrapperCenter='justify-center 
-            rounded-lg bg-white py-6 px-12 text-center'
-            alignCenter = 'items-center'
-            fontSize='lg'
-            noWrap={false}
+          <ServiceCard
+            image={gir4}
+            header="თანამშრომლობა"
+            paragraph="ვმუშაობთ როგორც ერთიანი გუნდი კლიენტთან და პარტნიორებთან ერთად."
+            direction='md:flex-col'
+            textStart='justify-start md:justify-center'
           />
         </div>
       </div>
@@ -211,7 +194,6 @@ const AboutUsPage = () => {
             noWrap={false}
           />
         </div>
-        {/* Кнопка, которая вызывает модальное окно. */}
         <button onClick={() => setShowConsultationModal(true)}>
           <Button
             title="კონსულტაციის დაგეგმვა"
@@ -221,14 +203,12 @@ const AboutUsPage = () => {
             hoverBg="bg-white"
           />
         </button>
-         {/* Шаг 4: Условный рендеринг модального окна. */}
-         {/* Убедитесь, что этот блок находится ВНУТРИ компонента, но НЕ ВНУТРИ другого `div`. */}
          {showConsultationModal && (
         <ConsultationModal
           showModal={showConsultationModal}
           setShowModal={setShowConsultationModal}
         />
-      )}
+          )}
       </div>
     </>
   );

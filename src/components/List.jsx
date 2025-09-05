@@ -9,7 +9,7 @@ const List = ({ HeaderTitle, ListItems }) => {
                 <li
                 className='list-item text-[#cccccc] 
                 hover:text-blue-500 cursor-pointer 
-                text-sm py-1'
+                text-sm py-1 underline'
                 key={item.id}>{item.title}</li>
             ))}
         </ul>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import heroImg from '../assets/heroImg.svg';
 import Button from './Button';
 import HeroCards from './HeroCards';
@@ -6,8 +6,11 @@ import card1 from '../assets/card1.svg';
 import card2 from '../assets/card2.svg';
 import card3 from '../assets/card3.svg';
 import { Link } from 'react-router-dom'
+import ConsultationModal from './ModalComponents/ConsultationModal';
+
 
 const Hero = () => {
+    const [showConsultationModal, setShowConsultationModal] = useState(false);
   return (
     <div className="relative w-[100%] h-screen">
       <div className="absolute inset-0 md:w-[100%] h-full overflow-hidden
@@ -29,14 +32,15 @@ const Hero = () => {
             ბიზნესის განვითარებაში.
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-            <Link to="/consultation">
-              <Button title="კონსულტაციის მოთხოვნა"
+          <button onClick={() => setShowConsultationModal(true)}>
+            <Button
+              title="კონსულტაციის მოთხოვნა"
               bgColor="bg-[#1b375d]"
               textColor="text-white"
               hoverText="text-[#1b375d]"
               hoverBg="bg-white"
-              />
-            </Link>
+            />
+        </button>
             <Link to="/services">
               <Button title="ჩვენი სერვისები"
               bgColor="bg-white"
@@ -64,7 +68,14 @@ const Hero = () => {
           />
         </div>
       </div>
+      {showConsultationModal && (
+        <ConsultationModal
+          showModal={showConsultationModal}
+          setShowModal={setShowConsultationModal}
+        />
+          )}
     </div>
+    
   );
 };
 

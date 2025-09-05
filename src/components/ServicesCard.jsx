@@ -2,12 +2,13 @@ import Ser4 from '../assets/Ser4.svg'
 import React from 'react';
 
 const ServicesCard = ({ image, header, paragraph, width = 'w-16', height = 'h-16',
-  features, direction = 'flex-row', children }) => {
+  features, textStart = 'justify-start', direction = 'flex-row', children }) => {
   return (
-    <div className="flex flex-col items-start p-6 shadow-md w-full rounded-xl bg-white">
-      <div className={`flex items-center gap-2 justify-center p-2 ${direction}`}>
+    <div className={`flex flex-col ${textStart} 
+    items-start p-6 shadow-md w-full rounded-xl bg-white`}>
+      <div className={`flex ${textStart} gap-2 items-center p-2 ${direction} w-full`}>
         <img src={image} alt={header} className={`${width} ${height} sm:w-auto sm:h-auto`} />
-        <h3 className="text-xl font-semibold text-[#1b365d]  sm:text-start text-start">{header}</h3>
+        <h3 className="text-l md:text-xl font-semibold text-[#1b365d]  sm:text-start text-start">{header}</h3>
       </div>
       <p className="text-[#374151] text-start mb-4 md:pl-2">{paragraph}</p>
 
