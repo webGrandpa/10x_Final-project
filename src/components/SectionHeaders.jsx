@@ -13,6 +13,7 @@ const SectionHeaders = ({
   pSize = "lg",
   gap = "4",
   dividerScale = 10,
+  maxWidth = "md:max-w-[680px]",
 }) => {
   const [dividerScaleX, setDividerScaleX] = useState(0);
   const sectionRef = useRef(null);
@@ -50,12 +51,13 @@ const SectionHeaders = ({
   return (
     <div
       ref={sectionRef}
-      className={`flex flex-col ${padding} ${bgcolor} w-full rounded-${rounded} gap-${gap} text-${textCenter}`}
+      className={`flex flex-col ${padding} ${bgcolor} 
+      w-full rounded-${rounded} gap-${gap} text-${textCenter}`}
     >
-      <h2 className={`${size} font-bold text-[#1B365D]`}>{header}</h2>
+      <h2 className={`${size} font-bold text-[#1B365D] `}>{header}</h2>
 
       {hasDivider && (
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center mb-3">
           <div
             className="h-1 bg-[#1B365D] rounded-3xl transition-transform duration-700 ease-out"
             style={{
@@ -69,7 +71,9 @@ const SectionHeaders = ({
 
       {paragraph && (
         <p
-          className={`text-${pSize} text-[#374151b9] max-w-full md:max-w-[680px] self-center md:self-${textCenter}`}
+          className={`text-${pSize} text-[#374151b9] max-w-full 
+          ${maxWidth} self-${textCenter} md:self-${textCenter} 
+          lg:self-${textCenter} text-${textCenter}`}
         >
           {paragraph}
         </p>

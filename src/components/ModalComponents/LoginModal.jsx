@@ -1,7 +1,7 @@
 // src/components/LoginModal.jsx
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
-import logo from '../assets/fincoLogo.svg';
+import Button from '../Button';
+import logo from '../../assets/fincoLogo.svg';
 import { Link } from 'react-router-dom';
 
 const LoginModal = ({ showModal, setShowModal, setShowRegistrationModal, setShowForgotPasswordModal }) => {
@@ -94,18 +94,18 @@ const LoginModal = ({ showModal, setShowModal, setShowRegistrationModal, setShow
           
               <div className="flex justify-between items-center text-sm">
                 <Link
-                to="#"
-                className="text-gray-600 hover:text-blue-500 transition-colors"
-                onClick={() => {
-                  setShowModal(false);
-                  setShowForgotPasswordModal(true);
-                }}
-              >
-                დაგავიწყდათ პაროლი?
-              </Link>
+                  to="#"
+                  className="text-gray-600 hover:text-blue-500 transition-colors underline"
+                  onClick={() => {
+                    setShowModal(false);
+                    setShowForgotPasswordModal(true);
+                  }}
+                >
+                  დაგავიწყდათ პაროლი?
+                </Link>
                 <Link
-                  to="/registration"
-                  className="text-gray-600 hover:text-blue-500 transition-colors"
+                  to="#"
+                  className="text-gray-600 hover:text-blue-500 transition-colors underline"
                   onClick={() => {
                     setShowModal(false)
                     setShowRegistrationModal(true)

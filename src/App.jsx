@@ -15,7 +15,7 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
-import LoginModal from "./components/LoginModal";
+import LoginModal from "./components/ModalComponents/LoginModal";
 // import ForgotPasswordPage from './pages/ForgotPasswordPage';
 
 function App() {

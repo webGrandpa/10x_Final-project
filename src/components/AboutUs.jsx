@@ -3,7 +3,6 @@ import HeroCards from './HeroCards'
 import teamImage from '../assets/teamImage.svg';
 import AbUs1 from '../assets/AbUs1.svg';
 import AbUs2 from '../assets/AbUs2.svg';
-import Hr from './Hr';
 import SectionHeaders from './SectionHeaders';
 
 const AboutUs = () => {
@@ -17,20 +16,21 @@ const AboutUs = () => {
           დაგეხმარონ ფინანსური გამოწვევების გადალახვაში."
           padding='py-0 md:py-10'
           dividerScale={10}
+          textCenter='center'
         />
         <div className='about-us-content flex flex-col md:flex-row items-center
          justify-between gap-8 md:gap-20'>
-            <div className='about-us-text w-full md:w-1/2 order-2 md:order-1'>
+            <div className='about-us-text w-full md:w-1/2 order-2 md:order-1 md:mb-10'>
                 <h3 className='text-xl font-semibold mb-5'>ვინ ვართ ჩვენ</h3>
                 <p className='text-[#374151bf] mb-5'>
                     2010 წლიდან ვეხმარებით მცირე და საშუალო ბიზნესებს ფინანსური სტაბილურობის მიღწევაში. ჩვენი მიზანია შევქმნათ გამძლე და ეფექტური ფინანსური სისტემები, რომლებიც უზრუნველყოფენ თქვენი ბიზნესის წარმატებას.
                 </p>
-                <p className='text-[#374151bf]'>
+                <p className='text-[#374151bf] md:pt-8'>
                     ჩვენი გუნდი შედგება სერტიფიცირებული ბუღალტრების, იურისტებისა და ფინანსური
                     მრჩევლებისგან, რომლებსაც აქვთ მრავალწლიანი გამოცდილება სხვადასხვა
                     ინდუსტრიაში.
                 </p>
-                <div className='hero-cards-container flex flex-col sm:flex-row pt-3 items-start gap-4'>
+                <div className='hero-cards-container flex flex-col sm:flex-row pt-3 md:pt-15 items-start gap-4'>
                     <HeroCards
                         cardImage={AbUs1}
                         numTitle="15+ პროფესიონალი"

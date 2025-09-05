@@ -7,9 +7,9 @@ import { HiMenuAlt3 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import styles from './headerGradient.module.css';
-import LoginModal from './LoginModal';
-import RegistrationModal from './RegistrationModal';
-import ForgotPasswordModal from './ForgotPasswordModal';
+import LoginModal from './ModalComponents/LoginModal';
+import RegistrationModal from './ModalComponents/RegistrationModal';
+import ForgotPasswordModal from './ModalComponents/ForgotPasswordModal';
 
 
 const Header = () => { 
