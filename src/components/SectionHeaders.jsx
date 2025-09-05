@@ -52,7 +52,7 @@ const SectionHeaders = ({
     <div
       ref={sectionRef}
       className={`flex flex-col ${padding} ${bgcolor} 
-      w-full rounded-${rounded} gap-${gap} text-${textCenter} md:items-${textCenter}`}
+      w-full rounded-${rounded} gap-${gap} text-${textCenter} items-${textCenter}`}
     >
       <h2 className={`${size} font-bold text-[#1B365D] `}>{header}</h2>
 
