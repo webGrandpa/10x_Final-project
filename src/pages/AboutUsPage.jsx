@@ -87,7 +87,7 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className='flex flex-col justify-between items-center p-6 md:p-8 lg:p-10      w-full gap-8'>
-        <div className='flex flex-col gap-5 justify-start text-start w-full'>
+        <div className='flex flex-col gap-5 justify-start text-start md:text-center w-full'>
           <SectionHeaders
             header="ჩვენი ღირებულებები"
             paragraph="   პრინციპები, რომლებიც გვაკავშირებს ყველა პროექტთან და პარტნიორთან:"

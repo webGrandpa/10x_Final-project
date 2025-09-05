@@ -8,7 +8,7 @@ import SectionHeaders from './SectionHeaders';
 const AboutUs = () => {
   return (
     <div id="about-us"
-    className='about-us-section flex items-center justify-center flex-col gap-8 py-10 px-6 md:px-10 lg:px-20 bg-[#e6f3ff9f]'
+    className='about-us-section flex items-center justify-center flex-col gap-8 pt-15 py-10 px-6 md:px-10 lg:px-20 bg-[#e6f3ff9f]'
     >
         <SectionHeaders
           header="ჩვენს შესახებ"

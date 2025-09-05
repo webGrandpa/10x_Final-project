@@ -12,7 +12,7 @@ import ConsultationModal from './ModalComponents/ConsultationModal';
 const Hero = () => {
     const [showConsultationModal, setShowConsultationModal] = useState(false);
   return (
-    <div className="relative w-[100%] h-screen">
+    <div className="relative w-[100%]">
       <div className="absolute inset-0 md:w-[100%] h-full overflow-hidden
       md:bg-cover md:bg-center">
         <img
@@ -21,7 +21,9 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover lg:object-center"
         />
       </div>
-      <div className="relative flex flex-col mt-20 md:gap-14 lg:gap-16 gap-6 items-start md:justify-center text-start h-full px-6 md:px-10 lg:px-20 py-10">
+      <div className="relative flex flex-col mt-20 md:gap-14 lg:gap-16 
+      gap-6 items-start md:justify-center text-start h-full px-6 
+      md:px-10 lg:px-20 py-10">
         <h1 className="text-3xl sm:text-2xl md:text-5xl lg:text-5xl 
         font-extrabold text-[#1b375d] leading-normal tracking-wide">
           ბუღალტრული <br /> მომსახურება  თქვენი <br /> ბიზნესისთვის
