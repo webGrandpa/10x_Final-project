@@ -4,9 +4,9 @@ import wu2 from '../assets/wu2.svg';
 import wu3 from '../assets/wu3.svg';
 import part1 from '../assets/part1.svg';
 import part2 from '../assets/part2.svg';
-import ServiceCard from './ServicesCard';
+import ServiceCard from './componentParts/ServicesCard';
 import SectionHeaders from './SectionHeaders';
-import Figure from './Figure';
+import Figure from './componentParts/Figure';
 
 const WhyUs = () => {
   return (

@@ -1,6 +1,6 @@
 // src/components/ConsultationModal.jsx
 import React, { useState, useEffect } from 'react';
-import Button from '../Button';
+import Button from '../buttonsComponents/Button';
 import logo from '../../assets/fincoLogo.svg';
 
 const ConsultationModal = ({ showModal, setShowModal }) => {

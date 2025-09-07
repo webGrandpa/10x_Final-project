@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ButtonArrow from '../assets/ButtonArrow.svg';
+import ButtonArrow from '../../assets/ButtonArrow.svg';
 
 
 const ButtonWithArrow = ({ buttonText, to, self = 'self-start',

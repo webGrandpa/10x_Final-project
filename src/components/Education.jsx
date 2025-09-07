@@ -1,10 +1,10 @@
 import React from 'react'
 import SectionHeaders from './SectionHeaders'
 import students from '../assets/students.svg'
-import Figure from './Figure'
+import Figure from './componentParts/Figure'
 import fig1 from '../assets/fig1.svg'
 import fig2 from '../assets/fig2.svg'
-import Button from './Button'
+import Button from './buttonsComponents/Button'
 import { Link } from 'react-router-dom'
 
 
@@ -18,7 +18,7 @@ const Education = () => {
         დაგეხმარებათ თქვენი ცოდნის გაღრმავებაში."
         padding='pt-10'
       />
-      <div className='flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20'>
+      <div className='flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20 min-[1920px]:justify-center'>
           <img
           className='w-full h-auto md:max-w-xl lg:max-w-3xl rounded-2xl'
           src={students} alt="Students" />

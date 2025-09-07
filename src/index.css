@@ -11,3 +11,7 @@
 /* .some{
   background-color: #cccccc95;
 } */
+
+body.no-scroll {
+  overflow: hidden;
+}

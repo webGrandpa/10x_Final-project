@@ -1,7 +1,7 @@
 // src/components/ForgotPasswordModal.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../Button';
+import Button from '../buttonsComponents/Button';
 import logo from '../../assets/fincoLogo.svg';
 
 const ForgotPasswordModal = ({ showModal, setShowModal, setShowLoginModal }) => {
@@ -90,7 +90,10 @@ const ForgotPasswordModal = ({ showModal, setShowModal, setShowLoginModal }) => 
             </div>
           </form>
           <div className="mt-6 text-center text-sm flex gap-5 justify-center items-center">
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition-colors underline">
+            <Link to="/" className="text-gray-600 hover:text-blue-500 transition-colors underline"
+            onClick={() => {
+                setShowModal(false);
+              }}>
             მთავარზე დაბრუნება
             </Link>
             <Link

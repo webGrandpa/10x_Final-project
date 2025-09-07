@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionHeaders from './SectionHeaders'
 import contact1 from '../assets/contact1.svg'
-import Button from './Button'
+import Button from './buttonsComponents/Button'
 import phone from '../assets/phone.svg'
 import mail from '../assets/mail.svg'
 import phone1 from '../assets/phone1.svg'
@@ -15,13 +15,13 @@ const ContactUs = () => {
               header="დაგვიკავშირდით"
               padding='pt-10'
             />
-            <div className='flex flex-col md:flex-row justify-between p-6 sm:p-10 pb-10 gap-10'>
+            <div className='flex flex-col md:flex-row justify-center items-center p-6 sm:p-10 pb-10 gap-10'>
                 <div className="w-full md:w-1/2 order-1 md:order-last">
                   <img
-                  className='rounded-lg shadow-md w-full h-auto'
+                  className='rounded-lg shadow-md max-w-full h-auto'
                   src={contact1} alt="Contact Us" />
                 </div>
-                <div className='flex flex-col gap-5 w-full md:w-1/2 order-1 md:order-first'>
+                <div className='flex flex-col gap-5 w-full md:w-1/2 order-1 md:order-first min-[1920px]:pl-50'>
                     <p className='text-[#1B365D] font-extrabold text-base md:text-lg'>
                       გაქვთ შეკითხვა სერვისზე? <br /> გინდათ კურსებზე რეგისტრაცია ან კონსულტაცია? <br /> Finco-ს გუნდი მზადაა უპასუხოს თქვენს ყოველ შეკითხვას
                     </p>

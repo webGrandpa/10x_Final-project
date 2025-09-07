@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import heroImg from '../assets/heroImg.svg';
-import Button from './Button';
-import HeroCards from './HeroCards';
+import Button from './buttonsComponents/Button';
+import HeroCards from './componentParts/HeroCards';
 import card1 from '../assets/card1.svg';
 import card2 from '../assets/card2.svg';
 import card3 from '../assets/card3.svg';
@@ -34,15 +34,14 @@ const Hero = () => {
             ბიზნესის განვითარებაში.
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-          <button onClick={() => setShowConsultationModal(true)}>
-            <Button
-              title="კონსულტაციის მოთხოვნა"
-              bgColor="bg-[#1b375d]"
-              textColor="text-white"
-              hoverText="text-[#1b375d]"
-              hoverBg="bg-white"
-            />
-        </button>
+          <Button
+            title="კონსულტაციის მოთხოვნა"
+            bgColor="bg-[#1b375d]"
+            textColor="text-white"
+            hoverText="text-[#1b375d]"
+            hoverBg="bg-white"
+            onClick={() => setShowConsultationModal(true)}
+          />
             <Link to="/services">
               <Button title="ჩვენი სერვისები"
               bgColor="bg-white"

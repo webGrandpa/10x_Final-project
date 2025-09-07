@@ -1,11 +1,13 @@
+// src/components/LiTag.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LiTag = ({ title, to }) => {
+const LiTag = ({ title, to, onClick }) => {
   return (
     <div className="text-[#374151d1] lg:hover:text-[#1b375d] cursor-pointer">
       <Link 
         to={to} 
+        onClick={onClick}
         className="
           relative block py-1.5 no-underline text-base font-medium
           lg:inline-block

@@ -2,8 +2,8 @@ import React from 'react';
 import Ser1 from '../assets/Ser1.svg';
 import Ser2 from '../assets/Ser2.svg';
 import Ser3 from '../assets/Ser3.svg';
-import ServiceCard from './ServicesCard';
-import ButtonWithArrow from './ButtonWithArrow';
+import ServiceCard from './componentParts/ServicesCard';
+import ButtonWithArrow from './buttonsComponents/ButtonWithArrow';
 import SectionHeaders from './SectionHeaders';
 
 const Services = () => {

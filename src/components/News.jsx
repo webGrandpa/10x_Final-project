@@ -1,11 +1,11 @@
 import React from 'react';
 import SectionHeaders from './SectionHeaders';
-import ServiceCard from './ServicesCard';
-import ButtonWithArrow from './ButtonWithArrow';
+import ServiceCard from './componentParts/ServicesCard';
+import ButtonWithArrow from './buttonsComponents/ButtonWithArrow';
 import news1 from '../assets/news1.svg';
 import news2 from '../assets/news2.svg';
 import news3 from '../assets/news3.svg';
-import Button from './Button';
+import Button from './buttonsComponents/Button';
 
 const News = () => {
   return (

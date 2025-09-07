@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SectionHeaders from '../components/SectionHeaders';
-import ServiceCard from '../components/ServicesCard';
-import HeroCard from '../components/HeroCards';
+import ServiceCard from '../components/componentParts/ServicesCard';
+import HeroCard from '../components/componentParts/HeroCards';
 import AbUsPage1 from '../assets/AbUsPage1.svg';
 import AbUsPage2 from '../assets/AbUsPage2.svg';
 import AbUsPage3 from '../assets/AbUsPage3.svg';
@@ -14,7 +14,7 @@ import avatar1 from '../assets/avatar1.svg';
 import avatar2 from '../assets/avatar2.svg';
 import avatar3 from '../assets/avatar3.svg';
 import avatar4 from '../assets/avatar4.svg';
-import Button from '../components/Button';
+import Button from '../components/buttonsComponents/Button';
 import ConsultationModal from '../components/ModalComponents/ConsultationModal';
 
 const AboutUsPage = () => {
@@ -41,6 +41,7 @@ const AboutUsPage = () => {
             hasDivider={false}
             textCenter='center md:start'
             padding='pb-0'
+            size='text-xl'
           />
         </div>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-4 w-full md:w-1/2 mt-4 md:mt-0 '>
@@ -94,6 +95,7 @@ const AboutUsPage = () => {
             hasDivider={true}
             textCenter='center'
             padding='pb-0'
+            size='text-2xl'
           />
         </div>
         <div className='grid grid-cols-1 
@@ -140,6 +142,7 @@ const AboutUsPage = () => {
             textCenter='center'
             padding='pb-0'
             maxWidth='width-full'
+            size='text-2xl'
           />
         </div>
         <div className='grid grid-cols-1 

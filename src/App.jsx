@@ -10,13 +10,12 @@ import EducationPage from './pages/EducationPage';
 import NewsPage from './pages/NewsPage';
 import AnotherServicesPage from './pages/AnotherServ';
 import AccountingServ from './pages/AccountingServ';
-// import RegistrationPage from './pages/RegistrationPage';
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
-import FAQ from "./components/FAQ";
+import FAQ from "./pages/FAQPage";
 import ContactUs from "./components/ContactUs";
 import LoginModal from "./components/ModalComponents/LoginModal";
-// import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import Chatbot from './components/ChatBot'; // Импортируем компонент чат-бота
 
 function App() {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -32,8 +31,6 @@ function App() {
           <Route path="/education" element={<EducationPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/another-services" element={<AnotherServicesPage />} />
-          {/* <Route path="/registration" element={<RegistrationPage />} /> */}
-          {/* <Route path="/forgot-password" element={<ForgotPasswordPage />} /> */}
           <Route path="/accountingservices" element={<AccountingServ />} />
           <Route path="/lawservices" element={<LawServ />} />
           <Route path="/consultation" element={<ConsultationServ />} />
@@ -43,6 +40,9 @@ function App() {
       </MainContent>
       <Footer />
       {showLoginModal && <LoginModal showModal={showLoginModal} setShowModal={setShowLoginModal} />}
+      
+      {/* Разместите Chatbot здесь, чтобы он отображался на всех страницах */}
+      <Chatbot />
     </div>
   )
 }

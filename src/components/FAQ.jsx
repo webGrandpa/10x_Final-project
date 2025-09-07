@@ -1,5 +1,5 @@
 import React from 'react';
-import FAQitem from './FAQitem';
+import FAQitem from './componentParts/FAQitem';
 import SectionHeaders from './SectionHeaders';
 
 const FAQ = () => {

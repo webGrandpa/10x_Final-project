@@ -2,15 +2,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import NavBar from './NavBar';
 import logo from '../assets/fincoLogo.svg';
-import Button from './Button';
+import Button from './buttonsComponents/Button';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import styles from './headerGradient.module.css';
+import styles from './componentParts/headerGradient.module.css';
 import LoginModal from './ModalComponents/LoginModal';
 import RegistrationModal from './ModalComponents/RegistrationModal';
 import ForgotPasswordModal from './ModalComponents/ForgotPasswordModal';
-
+import BurgerOverlay from './componentParts/BurgerOverlay';
 
 const Header = () => { 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +25,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (menuOpen) {
+    const isAnyModalOpen = showLoginModal || showRegistrationModal || showForgotPasswordModal;
+    
+    if (menuOpen || isAnyModalOpen) {
       document.body.classList.add('no-scroll');
     } else {
       document.body.classList.remove('no-scroll');
@@ -43,7 +45,7 @@ const Header = () => {
       document.removeEventListener('mousedown', handleOutsideClick);
       document.body.classList.remove('no-scroll');
     };
-  }, [menuOpen, menuRef]);
+  }, [menuOpen, showLoginModal, showRegistrationModal, showForgotPasswordModal, menuRef]);
 
   return (
     <>
@@ -53,22 +55,22 @@ const Header = () => {
         <div className="hidden lg:flex items-center space-x-8 max-md:w-full text-center justify-between w-[75%]">
           <NavBar />
           <div className="flex space-x-4 max-md:w-full text-center">
-            <button onClick={() => setShowLoginModal(true)}>
-              <Button title="შესვლა"
-                bgColor="bg-white"
-                textColor="text-[#1b375d]"
-                hoverText="text-white"
-                hoverBg="bg-[#1b375d]"
-              />
-            </button>
-            <button onClick={() => setShowRegistrationModal(true)}>
-              <Button title="რეგისტრაცია"
-                bgColor="bg-[#1b375d]"
-                textColor="text-white"
-                hoverText="text-[#1b375d]"
-                hoverBg="bg-white"
-              />
-            </button>
+            <Button
+              title="შესვლა"
+              onClick={() => setShowLoginModal(true)}
+              bgColor="bg-white"
+              textColor="text-[#1b375d]"
+              hoverText="text-white"
+              hoverBg="bg-[#1b375d]"
+            />
+            <Button
+              title="რეგისტრაცია"
+              onClick={() => setShowRegistrationModal(true)}
+              bgColor="bg-[#1b375d]"
+              textColor="text-white"
+              hoverText="text-[#1b375d]"
+              hoverBg="bg-white"
+            />
           </div>
         </div>
         <div className="lg:hidden z-50">
@@ -79,37 +81,41 @@ const Header = () => {
         <div
           ref={menuRef}
           className={`
-            fixed top-0 right-0 w-[50%] xs:w-1/2 sm:w-1/3 h-full bg-white transition-transform duration-500 transform
+            fixed top-0 right-0 w-[71%] xs:w-1/2 sm:w-1/3 h-full bg-white transition-transform duration-500 transform
             ${menuOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden z-40
             flex flex-col items-center p-6 space-y-4 pt-20 shadow-lg
           `}>
-          <NavBar />
+          {/* 3. Передаем onLinkClick в NavBar для мобильного меню */}
+          <NavBar onLinkClick={() => setMenuOpen(false)} />
           <div className="flex flex-col space-y-4 items-start justify-start w-full px-0 md:px-4">
-            <button onClick={() => {
-              setShowLoginModal(true);
-              setMenuOpen(false);
-            }}>
-              <Button title="შესვლა"
-                bgColor="bg-white"
-                textColor="text-[#1b375d]"
-                hoverText="text-white"
-                hoverBg="bg-[#1b375d]"
-              />
-            </button>
-            <button onClick={() => {
-              setShowRegistrationModal(true);
-              setMenuOpen(false);
-            }}>
-              <Button title="რეგისტრაცია"
-                bgColor="bg-[#1b365d]"
-                textColor="text-white"
-                hoverText="text-[#1b375d]"
-                hoverBg="bg-white"
-              />
-            </button>
+            <Button
+              title="შესვლა"
+              onClick={() => {
+                setShowLoginModal(true);
+                setMenuOpen(false);
+              }}
+              bgColor="bg-white"
+              textColor="text-[#1b375d]"
+              hoverText="text-white"
+              hoverBg="bg-[#1b375d]"
+            />
+            <Button
+              title="რეგისტრაცია"
+              onClick={() => {
+                setShowRegistrationModal(true);
+                setMenuOpen(false);
+              }}
+              bgColor="bg-[#1b365d]"
+              textColor="text-white"
+              hoverText="text-[#1b375d]"
+              hoverBg="bg-white"
+            />
           </div>
         </div>
       </div>
+      
+      <BurgerOverlay isVisible={menuOpen} />
+
       <LoginModal 
         showModal={showLoginModal} 
         setShowModal={setShowLoginModal} 

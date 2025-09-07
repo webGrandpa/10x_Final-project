@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faq1 from '../assets/faq1.svg';
+import faq1 from '../../assets/faq1.svg';
 
 const FAQitem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);

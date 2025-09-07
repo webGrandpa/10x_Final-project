@@ -1,3 +1,4 @@
+// src/components/Button.jsx
 import React, { useState } from 'react';
 
 const Button = ({
@@ -10,6 +11,7 @@ const Button = ({
   leftIcon,
   leftHoverIcon,
   textStart = "start",
+  onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -28,6 +30,7 @@ const Button = ({
   return (
     <div className={`max:md:w-full text-center md:text-${textStart}`}>
       <button
+        onClick={onClick}
         className={`max-md:w-full
           relative px-4 py-3 rounded-[8px] 
           overflow-hidden border border-[#1b375d] shadow-2xl

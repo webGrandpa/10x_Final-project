@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroCards from './HeroCards'
+import HeroCards from './componentParts/HeroCards';
 import teamImage from '../assets/teamImage.svg';
 import AbUs1 from '../assets/AbUs1.svg';
 import AbUs2 from '../assets/AbUs2.svg';
