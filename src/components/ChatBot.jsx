@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import logo from '../assets/fincoLogo.svg'
+import logo from '../assets/fincoLogo.svg';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,16 +19,18 @@ const ChatBot = () => {
     setMessages(prevMessages => [...prevMessages, userMessage]);
     setInput('');
 
-    // ჩასაპეჭი ადგილი
-    // ქვევით ბექენდის კოდი
+    // Место для интеграции с вашим бэкендом
     try {
+      // Здесь будет код вашего бэкенда
+      // Пример: const response = await fetch('/your-backend-api', { ... });
+      // Имитация ответа от ИИ
       const aiResponseText = await new Promise(resolve => {
         setTimeout(() => {
           const responses = [
-            'ბლა ბლა ბლა, ბლა ბლა ბლა, ასე მესმის შენი კითხვები',
-            'საინტერესო კითხვაა, მაგრამ, უინტერესო :)',
-            'კითხვა კითხვაა და თუ არ კითხავ შმითხვაა',
-            'რაამბავი კითხვებია რაიქნა?'
+            'Привет! Чем я могу помочь?',
+            'Я получил ваше сообщение.',
+            'Это интересный вопрос. Позвольте мне подумать.',
+            'Я всегда готов помочь. Задавайте любой вопрос.'
           ];
           resolve(responses[Math.floor(Math.random() * responses.length)]);
         }, 1000);
@@ -41,8 +43,6 @@ const ChatBot = () => {
       const errorMessage = { text: "Извините, произошла ошибка. Пожалуйста, попробуйте снова.", sender: 'ai' };
       setMessages(prevMessages => [...prevMessages, errorMessage]);
     }
-
-    //ზევით არის ბექენდის კოდი
   };
 
   useEffect(() => {
@@ -65,16 +65,15 @@ const ChatBot = () => {
       )}
 
       {isOpen && (
-        <div className="fixed bottom-0 right-4 w-80 md:h-[400px] lg:h-[600]
-         bg-white text-[#002E85E5] rounded-lg
-          shadow-2xl flex flex-col z-50 overflow-hidden">
+        <div className="fixed inset-0 md:w-80 md:h-[450px] md:bottom-0 md:right-4 md:top-auto md:left-auto md:rounded-lg
+         bg-white text-[#002E85E5] shadow-2xl flex flex-col z-50 overflow-hidden">
           <div className="p-4 bg-white shadow-md
           flex justify-between items-center">
             <div className='flex flex-col'>
-                <img src={logo} alt=""
+                <img src={logo} alt="Finco Logo"
                 className='w-22'/>
                 <div className='px-1 rounded-lg bg-[#E6F3FF]'>
-                    <h2 className="text-[14px]">ასისტენტი</h2>
+                    <h2 className="text-[14px]">Ассистент</h2>
                 </div>
             </div>
             <button onClick={toggleChat} className="text-gray-400 hover:text-white">
@@ -101,7 +100,7 @@ const ChatBot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-grow p-3 rounded-lg bg-white text-[gray-800] placeholder-[gray-800] focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="მოგვწერეთ..."
+              placeholder="Отправьте сообщение..."
             />
             <button type="submit" className="p-3 bg-[#E6F3FF] text-white rounded-full hover:bg-[#E6F3FF] focus:outline-none focus:ring-2 focus:ring-blue-500">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send-horizontal">
