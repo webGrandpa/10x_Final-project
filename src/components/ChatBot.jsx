@@ -19,18 +19,16 @@ const ChatBot = () => {
     setMessages(prevMessages => [...prevMessages, userMessage]);
     setInput('');
 
-    // Место для интеграции с вашим бэкендом
+    // ბექენდის ინტეგრაციის ადგილი
     try {
-      // Здесь будет код вашего бэкенда
-      // Пример: const response = await fetch('/your-backend-api', { ... });
-      // Имитация ответа от ИИ
+      // აქ უნდა იყოს ბექენდის კოდი :)
       const aiResponseText = await new Promise(resolve => {
         setTimeout(() => {
           const responses = [
-            'Привет! Чем я могу помочь?',
-            'Я получил ваше сообщение.',
-            'Это интересный вопрос. Позвольте мне подумать.',
-            'Я всегда готов помочь. Задавайте любой вопрос.'
+            'რით შემიძლია დაგეხმაროთ?',
+            'თქვენი შეტყობინება მუშავდება',
+            'საინტერესო კითხვაა, დავფიქრდები',
+            'ყოველთვის მზად ვარ დაგეხმაროთ, დამისვით კვითხვა'
           ];
           resolve(responses[Math.floor(Math.random() * responses.length)]);
         }, 1000);
@@ -39,8 +37,8 @@ const ChatBot = () => {
       const aiMessage = { text: aiResponseText, sender: 'ai' };
       setMessages(prevMessages => [...prevMessages, aiMessage]);
     } catch (error) {
-      console.error("Ошибка при получении ответа от ИИ:", error);
-      const errorMessage = { text: "Извините, произошла ошибка. Пожалуйста, попробуйте снова.", sender: 'ai' };
+      console.error("დაფიქსირდა შეცდომა:", error);
+      const errorMessage = { text: "უკაცრავად, დაფიქსირდა შეცდომა. გთხოვთ სცადოთ თავიდან", sender: 'ai' };
       setMessages(prevMessages => [...prevMessages, errorMessage]);
     }
   };
@@ -73,7 +71,7 @@ const ChatBot = () => {
                 <img src={logo} alt="Finco Logo"
                 className='w-22'/>
                 <div className='px-1 rounded-lg bg-[#E6F3FF]'>
-                    <h2 className="text-[14px]">Ассистент</h2>
+                    <h2 className="text-[14px]">ასისტენტი</h2>
                 </div>
             </div>
             <button onClick={toggleChat} className="text-gray-400 hover:text-white">
@@ -100,9 +98,9 @@ const ChatBot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-grow p-3 rounded-lg bg-white text-[gray-800] placeholder-[gray-800] focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Отправьте сообщение..."
+              placeholder="მოგვწერეთ კითხვა..."
             />
-            <button type="submit" className="p-3 bg-[#E6F3FF] text-white rounded-full hover:bg-[#E6F3FF] focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" className="p-3 bg-[#1B365D] text-white rounded-full hover:bg-[#E6F3FF] focus:outline-none focus:ring-2 focus:ring-blue-500">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send-horizontal">
                 <path d="m3 3 3 9-3 9 19-9Z"></path>
                 <path d="M22 12H6"></path>

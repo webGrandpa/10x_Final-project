@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import MainContent from "./components/MainContent"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import MainContent from "./components/MainContent";
 import AboutUsPage from './pages/AboutUsPage';
 import ConsultationServ from './pages/ConsultationServ';
 import LawServ from './pages/LawServ';
@@ -15,13 +15,15 @@ import ServicesPage from "./pages/ServicesPage";
 import FAQ from "./pages/FAQPage";
 import ContactUs from "./components/ContactUs";
 import LoginModal from "./components/ModalComponents/LoginModal";
-import Chatbot from './components/ChatBot'; // Импортируем компонент чат-бота
+import Chatbot from './components/ChatBot';
+import ScrollToTop from './components/componentParts/ScrollToTop';
 
 function App() {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   return (
     <div className="App flex flex-col min-h-screen">
+      <ScrollToTop />
       <Header setShowLoginModal={setShowLoginModal} />
       <MainContent>
         <Routes>
@@ -40,11 +42,9 @@ function App() {
       </MainContent>
       <Footer />
       {showLoginModal && <LoginModal showModal={showLoginModal} setShowModal={setShowLoginModal} />}
-      
-      {/* Разместите Chatbot здесь, чтобы он отображался на всех страницах */}
       <Chatbot />
     </div>
-  )
+  );
 }
 
 export default App;
