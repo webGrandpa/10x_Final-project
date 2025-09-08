@@ -69,15 +69,17 @@ const Header = () => {
         <div className="hidden lg:flex items-center space-x-8 max-md:w-full text-center justify-between w-[75%]">
           <NavBar />
           {isLoggedIn ? (
-            <div className="flex items-center flex-col space-x-2">
-              <Link to="/userprofile" className="flex items-center space-x-2 rounded-lg hover:bg-gray-100 transition-colors">
-                <img src={userProfileIcon} alt="User Profile" className="h-10 w-10" />
-                <span className="text-[#1b375d] font-semibold">{userEmail}</span>
-              </Link>
-              <button
-                className=' hover:underline hover:text-blue-950 text-blue-500 hover:cursor-pointer'
+            <div className="flex items-center space-x-2">
+              <img src={userProfileIcon} alt="User Profile" className="h-10 w-10" />
+              <span className="text-[#1b375d] font-semibold">{userEmail}</span>
+              <Button
+                title="აბგ"
                 onClick={handleLogout}
-              >გამოსვლა</button>
+                bgColor="bg-white"
+                textColor="text-[#1b375d]"
+                hoverText="text-white"
+                hoverBg="bg-[#1b375d]"
+              />
             </div>
           ) : (
             <div className="flex space-x-4 max-md:w-full text-center">
@@ -121,7 +123,7 @@ const Header = () => {
                   <span className="text-[#1b375d] font-semibold text-sm break-all">{userEmail}</span>
                 </div>
                 <Button
-                  title="გამოსვლა"
+                  title="აბგ"
                   onClick={handleLogout}
                   bgColor="bg-white"
                   textColor="text-[#1b375d]"

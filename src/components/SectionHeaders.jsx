@@ -54,7 +54,7 @@ const SectionHeaders = ({
       className={`flex flex-col ${padding} ${bgcolor} 
       w-full rounded-${rounded} gap-${gap} text-${textCenter} items-${textCenter}`}
     >
-      <h2 className={`${size} font-bold text-[#1B365D] `}>{header}</h2>
+      <h2 className={`${size} font-bold text-[#1B365D]`}>{header}</h2>
 
       {hasDivider && (
         <div className="flex justify-center mb-3">
@@ -71,7 +71,7 @@ const SectionHeaders = ({
 
       {paragraph && (
         <p
-          className={`text-${pSize} text-[#374151b9] max-w-full 
+          className={`text-${pSize} text-[#374151b9] max-w-full md:max-w-[980px] 
           ${maxWidth} self-${textCenter} md:self-${textCenter} 
           lg:self-${textCenter} text-${textCenter}`}
         >

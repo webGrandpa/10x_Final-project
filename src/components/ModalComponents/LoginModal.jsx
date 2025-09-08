@@ -4,13 +4,17 @@ import Button from '../buttonsComponents/Button';
 import logo from '../../assets/fincoLogo.svg';
 import { Link } from 'react-router-dom';
 
-const LoginModal = ({ showModal, setShowModal, setShowRegistrationModal, setShowForgotPasswordModal }) => {
+const LoginModal = ({ showModal, setShowModal, setShowRegistrationModal, setShowForgotPasswordModal, onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('გინდა შესვლა მარა სადაა:', { email, password });
+
+    onLoginSuccess(email);
+    setEmail('');
+    setPassword('');
   };
 
   useEffect(() => {

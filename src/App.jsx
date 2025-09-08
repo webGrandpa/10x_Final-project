@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
@@ -14,17 +15,17 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import FAQ from "./pages/FAQPage";
 import ContactUs from "./components/ContactUs";
-import LoginModal from "./components/ModalComponents/LoginModal";
 import Chatbot from './components/ChatBot';
 import ScrollToTop from './components/componentParts/ScrollToTop';
+import UserProfilePage from './pages/UserProfilePage';
 
 function App() {
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  // const [showLoginModal, setShowLoginModal] = useState(false);
 
   return (
     <div className="App flex flex-col min-h-screen">
       <ScrollToTop />
-      <Header setShowLoginModal={setShowLoginModal} />
+      <Header />
       <MainContent>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -38,10 +39,10 @@ function App() {
           <Route path="/consultation" element={<ConsultationServ />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path='/userprofile' element={<UserProfilePage />} />
         </Routes>
       </MainContent>
       <Footer />
-      {showLoginModal && <LoginModal showModal={showLoginModal} setShowModal={setShowLoginModal} />}
       <Chatbot />
     </div>
   );

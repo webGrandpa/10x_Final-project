@@ -4,7 +4,7 @@ import Ser4 from '../../assets/Ser4.svg'
 const ServicesPageCard = ({ header, paragraph,
   features, image, imageWidth, imageHeight, children }) => {
   return (
-    <div className='flex flex-col md:flex-row-reverse justify-center 
+    <div className='flex flex-col md:flex-row-reverse md:justify-between justify-center 
       items-center bg-white p-9 rounded-xl shadow-md'>
       <img src={image} alt={header} 
         className={`max-${imageWidth} ${imageHeight} md:p-4`}/>
