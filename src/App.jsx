@@ -15,7 +15,7 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import FAQ from "./pages/FAQPage";
 import ContactUs from "./components/ContactUs";
-import Chatbot from './components/ChatBot';
+import ChatBot from './components/ChatBot';
 import ScrollToTop from './components/componentParts/ScrollToTop';
 import UserProfilePage from './pages/UserProfilePage';
 
@@ -43,7 +43,7 @@ function App() {
         </Routes>
       </MainContent>
       <Footer />
-      <Chatbot />
+      <ChatBot />
     </div>
   );
 }
