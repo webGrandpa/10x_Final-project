@@ -1,4 +1,4 @@
-// src/data/aboutUsData.js
+// src/components/data/aboutUsData.js
 
 import AbUsPage1 from '../../assets/AbUsPage1.svg';
 import AbUsPage2 from '../../assets/AbUsPage2.svg';

@@ -14,7 +14,7 @@ import {
   coreValues,
   teamHeader,
   teamMembers
-} from '../components/datas/AboutUsData';
+} from '../components/data/AboutUsData.js';
 
 const AboutUsPage = () => {
   const [showConsultationModal, setShowConsultationModal] = useState(false);

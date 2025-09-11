@@ -5,12 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
 import AboutUsPage from './pages/AboutUsPage';
-import ConsultationServ from './pages/ConsultationServ';
-import LawServ from './pages/LawServ';
 import EducationPage from './pages/EducationPage';
 import NewsPage from './pages/NewsPage';
-import AnotherServicesPage from './pages/AnotherServ';
-import AccountingServ from './pages/AccountingServ';
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import FAQ from "./pages/FAQPage";
@@ -33,10 +29,6 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/education" element={<EducationPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/another-services" element={<AnotherServicesPage />} />
-          <Route path="/accountingservices" element={<AccountingServ />} />
-          <Route path="/lawservices" element={<LawServ />} />
-          <Route path="/consultation" element={<ConsultationServ />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path='/userprofile' element={<UserProfilePage />} />
