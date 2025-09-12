@@ -1,6 +1,6 @@
 // src/components/NavBar.jsx
 import React from 'react'
-import LiTag from './LiTag'
+import LiTag from './componentParts/LiTag'
 
 
 const NavBar = ({ onLinkClick }) => {

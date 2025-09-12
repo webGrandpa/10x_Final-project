@@ -1,56 +1,34 @@
+// src/components/News.jsx
 import React from 'react';
 import SectionHeaders from './SectionHeaders';
 import ServiceCard from './componentParts/ServicesCard';
 import ButtonWithArrow from './buttonsComponents/ButtonWithArrow';
-import news1 from '../assets/news1.svg';
-import news2 from '../assets/news2.svg';
-import news3 from '../assets/news3.svg';
 import Button from './buttonsComponents/Button';
+import { newsData } from './data/homePage/newsData.js';
 
 const News = () => {
   return (
-    <div className='news-section bg-[#1B365D0D] flex flex-col items-center px-6 md:px-10 lg:px-20'>
+    <div className='bg-[#1B365D0D] flex flex-col items-center px-6 md:px-10 lg:px-20 py-10'>
       <SectionHeaders
-        header="სიახლეები და სტატიები"
-        paragraph="გაეცანით უახლეს ინფორმაციას ფინანსების, ბუღალტერიის და ბიზნესის სფეროში"
-        margin="mb-0"
-        padding='pt-10'
+        header={newsData.sectionHeader.header}
+        paragraph={newsData.sectionHeader.paragraph}
         textCenter='center'
-        textStart='center'
       />
-      <div className='flex flex-col md:flex-row justify-center  items-stretch gap-3 md:gap-8 mb-8'>
-        <ServiceCard
-          image={news1}
-          width='w-full'
-          height='h-full'
-          header="2025 წლის საგადასახადო ცვლილებები ბიზნესისთვის"
-          direction={'flex-col'}
-          paragraph="გაეცანით 2025 წლის საგადასახადო კოდექსში შეტანილ ცვლილებებს და მათ გავლენას თქვენს..."
-        >
-          <ButtonWithArrow buttonText="დაწვრილებით" />
-        </ServiceCard>
-        <ServiceCard
-          image={news2}
-          width='w-full'
-          height='h-full'
-          header="ციფრული ბუღალტერიის უპირატესობები"
-          direction={'flex-col'}
-          paragraph="როგორ შეუძლია ციფრულ ბუღალტერიას გააუმჯობესოს თქვენი ბიზნესის ეფექტურობა და ..."
-        >
-          <ButtonWithArrow buttonText="დაწვრილებით" />
-        </ServiceCard>
-        <ServiceCard
-          image={news3}
-          width='w-full'
-          height='h-full'
-          header="როგორ შევადგინოთ ეფექტური ბიზნეს გეგმა"
-          direction={'flex-col'}
-          paragraph="ბიზნეს გეგმის შედგენის პრაქტიკული გზამკვლევი დამწყები მეწარმეებისთვის. გაეცანით ბიზნეს..."
-        >
-          <ButtonWithArrow buttonText="დაწვრილებით" />
-        </ServiceCard>
+      <div className='flex flex-col md:flex-row justify-center items-stretch gap-8 my-8 w-full'>
+        {newsData.articles.map(article => (
+            <ServiceCard
+                key={article.id}
+                image={article.image}
+                header={article.header}
+                paragraph={article.paragraph}
+                direction={'flex-col'}
+                height='h-full'
+            >
+                <ButtonWithArrow buttonText="დაწვრილებით" />
+            </ServiceCard>
+        ))}
       </div>
-      <div className="max:md:w-full text-center mt-4 mb-15">
+      <div className="max-md:w-full text-center"> 
         <Button
           title="ყველა სიახლე"
           bgColor="bg-white"

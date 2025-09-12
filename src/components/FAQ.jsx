@@ -1,26 +1,23 @@
 // src/components/FAQ.jsx
-
 import React, { useState } from 'react';
 import FAQitem from './componentParts/FAQitem';
 import SectionHeaders from './SectionHeaders';
-// data
-import { faqHeader, faqQuestions } from './data/FAQData';
+import { faqData } from './data/homePage/faqData.js';
 
 const FAQ = () => {
-  //open/close logic here
   const [openId, setOpenId] = useState(null);
+  
   const handleToggle = (id) => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    <div className="bg-[#E8EDF2] py-6 px-4 md:px-30">
+    <div className="bg-[#E8EDF2] py-10 px-4">
       <SectionHeaders
-        header={faqHeader.header}
-        padding='pt-10'
+        header={faqData.sectionHeader.header}
       />
-      <div className="flex flex-col items-center">
-        {faqQuestions.map((q) => (
+      <div className="flex flex-col items-center mt-8">
+        {faqData.questions.map((q) => (
           <FAQitem
             key={q.id} 
             id={q.id}

@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './componentParts/List';
 import footerLogo from '../assets/footerLogo.svg';
-import SocialMediaIcons from './SocialMediaIcons';
+import SocialMediaIcons from './componentParts/SocialMediaIcons';
 
 const Footer = () => {
     // const InstantLinks = [

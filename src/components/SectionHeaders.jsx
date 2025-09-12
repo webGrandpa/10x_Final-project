@@ -6,7 +6,7 @@ const SectionHeaders = ({
   bgcolor = "",
   hasDivider = true,
   textCenter = "center",
-  padding = "py-20",
+  padding = "py-10",
   rounded = "none",
   children,
   size = "text-3xl",
