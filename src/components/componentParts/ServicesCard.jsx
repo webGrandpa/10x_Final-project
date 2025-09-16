@@ -10,7 +10,7 @@ const ServicesCard = ({ image, header, paragraph, width = 'w-16', height = 'h-16
         <img src={image} alt={header} className={`${width} ${height} sm:w-auto sm:h-auto`} />
         <h3 className="text-l md:text-xl font-semibold text-[#1b365d]  sm:text-start text-start">{header}</h3>
       </div>
-      <p className="text-[#374151] text-start mb-4 md:pl-2">{paragraph}</p>
+      <p className="text-[#374151] max-h-[100px] overflow-hidden text-start mb-4 md:pl-2">{paragraph}</p>
 
       {features?.length > 0 && (
         <ul className="text-[#374151] list-disc list-inside space-y-1 mb-2">

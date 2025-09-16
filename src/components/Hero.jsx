@@ -50,6 +50,7 @@ const Hero = () => {
                             numTitle={stat.numTitle}
                             textTitle={stat.textTitle}
                             variant="statistic"
+                            textDirection='text-start'
                         />
                     ))}
                 </div>
